@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('crud_laravels', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->nullable();;
-            $table->string('email')->nullable();;
-            $table->string('message')->nullable();;
-            $table->timestamps();
+        Schema::table('posts', function (Blueprint $table) {
+            //
         });
     }
 
@@ -29,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('crud_laravels');
+        Schema::table('posts', function (Blueprint $table) {
+            //
+        });
     }
 };
